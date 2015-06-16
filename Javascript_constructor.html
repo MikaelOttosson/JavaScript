@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Constructor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table class="table table-striped" style="width:400px;margin:2em">
+	<tr>
+		<th> Employees from Javascripts constructor</th>
+	<tr>
+	<tr>
+		<td  id="row1"></td>
+	</tr>
+	<tr>
+		<td  id="row2"></td>
+	</tr>
+	<tr>
+		<td  id="row3"></td>
+	</tr>
+</table>
+
+<script>
+function employee(first, last, age, id) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.employeeId = id;
+}
+
+var emp1 = new employee("John", "Doe", 50, 1);
+var emp2 = new employee("Molly", "Wright", 48, 2);
+var emp3 = new employee("Sam", "Smith", 29, 3);
+
+document.getElementById("row1").innerHTML =
+ "Employee " + emp1.employeeId + ", " + emp1.firstName + " " + emp1.lastName + ", Age: " + emp1.age; 
+
+document.getElementById("row2").innerHTML =
+ "Employee " + emp2.employeeId + ", " + emp2.firstName + " " + emp2.lastName + ", Age: " + emp2.age; 
+
+document.getElementById("row3").innerHTML =
+ "Employee " + emp3.employeeId + ", " + emp3.firstName + " " + emp3.lastName + ", Age: " + emp3.age; 
+
+
+</script>
+
+</body>
+</html>
+
